@@ -1,0 +1,180 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+  border-bottom: 1px solid #e8edf2;
+  box-shadow: 0 4px 18px rgb(22 53 73 / 5%);
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  min-height: 88px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  width: min(100% - 64px, 1280px);
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: block;
+  width: 218px;
+  height: auto;
+}
+
+.navbar-navigation {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.1vw, 32px);
+}
+
+.navbar-link {
+  position: relative;
+  padding: 10px 0;
+  color: #334155;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 160ms ease;
+}
+
+.navbar-link:hover,
+.navbar-link.is-active {
+  color: #5343c4;
+}
+
+.navbar-link.is-active::after {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: #6c5ce7;
+  content: '';
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.1vw, 32px);
+}
+
+.navbar-appointment {
+  flex: 0 0 auto;
+}
+
+.navbar-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #fff;
+  color: #263648;
+  cursor: pointer;
+}
+
+.navbar-menu-toggle:focus-visible,
+.navbar-brand:focus-visible,
+.navbar-link:focus-visible {
+  outline: 3px solid rgb(108 92 231 / 40%);
+  outline-offset: 4px;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    gap: 20px;
+    width: min(100% - 40px, 1280px);
+  }
+
+  .navbar-navigation {
+    gap: 12px;
+  }
+
+  .navbar-links {
+    gap: 14px;
+  }
+
+  .navbar-link {
+    font-size: 14px;
+  }
+
+  .navbar-logo {
+    width: 190px;
+  }
+}
+
+@media (max-width: 735px) {
+  .navbar {
+    min-height: 76px;
+    flex-wrap: wrap;
+    gap: 0;
+    width: calc(100% - 32px);
+    padding: 10px 0;
+  }
+
+  .navbar-logo {
+    width: 176px;
+  }
+
+  .navbar-menu-toggle {
+    display: inline-flex;
+  }
+
+  .navbar-navigation {
+    display: none;
+    flex: 0 0 100%;
+    align-items: stretch;
+    gap: 10px;
+    padding: 12px 0 4px;
+  }
+
+  .navbar-navigation.is-open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-links {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .navbar-link {
+    padding: 11px 12px;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+
+  .navbar-link:hover,
+  .navbar-link.is-active {
+    background: #f3f0ff;
+  }
+
+  .navbar-link.is-active::after {
+    display: none;
+  }
+
+  .navbar-appointment {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-link {
+    transition: none;
+  }
+}

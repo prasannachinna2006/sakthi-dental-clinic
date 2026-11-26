@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@theme {
+  --color-clinic-primary: #6c5ce7;
+  --color-clinic-primary-dark: #5343c4;
+  --color-clinic-lavender: #f3f0ff;
+  --color-clinic-lavender-soft: #faf9ff;
+  --color-clinic-ink: #25243a;
+  --color-clinic-muted: #67677a;
+  --color-clinic-border: #e8e5f1;
+  --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+  --radius-card: 1.25rem;
+  --shadow-soft: 0 12px 36px rgb(46 35 100 / 8%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #fff;
+  color: var(--color-clinic-ink);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgb(108 92 231 / 45%);
+  outline-offset: 3px;
+}
+
+.site-shell {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-main {
+  flex: 1;
+}
+
+.site-container {
+  width: min(100% - 48px, 1200px);
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 20;
+  padding: 10px 16px;
+  transform: translateY(-160%);
+  border-radius: 8px;
+  background: var(--color-clinic-ink);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.button-primary {
+  background: var(--color-clinic-primary);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.button-primary:hover {
+  background: var(--color-clinic-primary-dark);
+  box-shadow: var(--shadow-soft);
+}
+
+.page-placeholder {
+  display: grid;
+  min-height: 440px;
+  align-content: center;
+  justify-items: start;
+  padding-block: 72px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--color-clinic-primary-dark);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.page-title {
+  margin: 0;
+  color: var(--color-clinic-ink);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 650;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+.page-placeholder-message {
+  max-width: 520px;
+  margin: 20px 0 0;
+  color: var(--color-clinic-muted);
+  font-size: 1.05rem;
+}
+
+@media (max-width: 600px) {
+  .site-container {
+    width: calc(100% - 36px);
+  }
+
+  .page-placeholder {
+    min-height: 380px;
+    padding-block: 56px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

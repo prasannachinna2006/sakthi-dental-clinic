@@ -1,0 +1,431 @@
+.about-intro-section {
+  padding-block: clamp(64px, 8vw, 100px);
+  background: #faf9ff;
+}
+
+.about-intro-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.94fr);
+  align-items: center;
+  gap: clamp(40px, 7vw, 88px);
+}
+
+.about-intro-copy h1 {
+  max-width: 600px;
+  margin: 0 0 22px;
+  color: var(--color-clinic-ink);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 650;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+
+.about-intro-copy > p:not(.eyebrow) {
+  margin: 0 0 16px;
+  color: var(--color-clinic-muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.about-intro-copy > p:last-child {
+  margin-bottom: 0;
+}
+
+.about-intro-image-wrap {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 1.3;
+  border: 1px solid var(--color-clinic-border);
+  border-radius: 24px;
+  background: var(--color-clinic-lavender);
+  box-shadow: var(--shadow-soft);
+}
+
+.about-intro-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-image-caption {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  left: 16px;
+  display: flex;
+  min-height: 54px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid rgb(255 255 255 / 55%);
+  border-radius: 12px;
+  background: rgb(255 255 255 / 94%);
+  color: var(--color-clinic-ink);
+  font-size: 13px;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+}
+
+.about-image-caption-icon {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--color-clinic-lavender);
+  color: var(--color-clinic-primary-dark);
+}
+
+.about-founder-section {
+  padding-block: clamp(68px, 8vw, 104px);
+}
+
+.founder-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  align-items: center;
+  gap: clamp(42px, 7vw, 90px);
+}
+
+.founder-visual {
+  position: relative;
+  display: flex;
+  min-height: 420px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 36px;
+  border: 1px solid #e8e3fc;
+  border-radius: 24px;
+  background:
+    radial-gradient(ellipse at 50% 20%, rgb(255 255 255 / 92%), transparent 58%),
+    var(--color-clinic-lavender);
+  text-align: center;
+}
+
+.founder-visual::before,
+.founder-visual::after {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border: 1px solid rgb(108 92 231 / 11%);
+  border-radius: 50%;
+  content: '';
+  pointer-events: none;
+}
+
+.founder-visual::before {
+  top: -145px;
+  right: -72px;
+}
+
+.founder-visual::after {
+  bottom: -155px;
+  left: -82px;
+}
+
+.founder-visual-mark {
+  display: grid;
+  width: 76px;
+  height: 76px;
+  place-items: center;
+  border: 1px solid rgb(108 92 231 / 12%);
+  border-radius: 23px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  color: var(--color-clinic-primary-dark);
+}
+
+.founder-visual-kicker {
+  margin: 22px 0 4px;
+  color: var(--color-clinic-primary-dark);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.founder-visual h3 {
+  margin: 0;
+  color: var(--color-clinic-ink);
+  font-size: 1.7rem;
+  font-weight: 650;
+  letter-spacing: -0.035em;
+}
+
+.founder-visual-caption {
+  max-width: 270px;
+  margin: 8px 0 0;
+  color: var(--color-clinic-muted);
+  font-size: 14px;
+}
+
+.founder-milestones {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgb(108 92 231 / 15%);
+}
+
+.founder-milestones div {
+  display: grid;
+  gap: 3px;
+}
+
+.founder-milestones strong {
+  color: var(--color-clinic-primary-dark);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.founder-milestones span {
+  color: var(--color-clinic-muted);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.founder-copy .eyebrow {
+  margin-bottom: 10px;
+}
+
+.founder-copy h2 {
+  margin: 0 0 21px;
+  color: var(--color-clinic-ink);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 650;
+  letter-spacing: -0.045em;
+  line-height: 1.16;
+}
+
+.founder-copy > p:not(.eyebrow) {
+  margin: 0 0 14px;
+  color: var(--color-clinic-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.founder-copy > p:last-child {
+  margin-bottom: 0;
+}
+
+.about-values-section {
+  padding-block: clamp(60px, 7vw, 88px);
+  background: var(--color-clinic-lavender-soft);
+}
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.about-value-card {
+  min-height: 270px;
+  padding: clamp(26px, 4vw, 42px);
+  border: 1px solid var(--color-clinic-border);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 8px 26px rgb(46 35 100 / 4%);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.about-value-card:hover {
+  transform: translateY(-3px);
+  border-color: #d3cdf5;
+  box-shadow: var(--shadow-soft);
+}
+
+.about-value-icon {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--color-clinic-lavender);
+  color: var(--color-clinic-primary-dark);
+}
+
+.about-value-card h2 {
+  margin: 22px 0 10px;
+  color: var(--color-clinic-ink);
+  font-size: 1.35rem;
+  font-weight: 650;
+}
+
+.about-value-card p {
+  margin: 0;
+  color: var(--color-clinic-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.about-team-section {
+  padding-block: clamp(68px, 8vw, 104px);
+}
+
+.about-section-heading {
+  max-width: 680px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.about-section-heading .eyebrow {
+  margin-bottom: 10px;
+}
+
+.about-section-heading h2 {
+  margin: 0;
+  color: var(--color-clinic-ink);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 650;
+  letter-spacing: -0.045em;
+  line-height: 1.16;
+}
+
+.about-section-heading > p:last-child:not(.eyebrow) {
+  margin: 14px 0 0;
+  color: var(--color-clinic-muted);
+  font-size: 1rem;
+}
+
+.about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-team-card {
+  display: flex;
+  min-height: 190px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px;
+  border: 1px solid var(--color-clinic-border);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 26px rgb(46 35 100 / 4%);
+}
+
+.team-initials {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid #e8e3fc;
+  border-radius: 15px;
+  background: var(--color-clinic-lavender);
+  color: var(--color-clinic-primary-dark);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.about-team-card h3 {
+  margin: 17px 0 3px;
+  color: var(--color-clinic-ink);
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.about-team-card p {
+  margin: 0;
+  color: var(--color-clinic-primary-dark);
+  font-size: 13px;
+  font-weight: 550;
+}
+
+@media (max-width: 1000px) {
+  .about-intro-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    gap: 36px;
+  }
+
+  .founder-layout {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 36px;
+  }
+
+  .about-team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 740px) {
+  .about-intro-layout,
+  .founder-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro-image-wrap {
+    aspect-ratio: 1.65;
+  }
+
+  .founder-visual {
+    min-height: 370px;
+  }
+
+  .about-values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .about-intro-layout,
+  .founder-layout {
+    gap: 28px;
+  }
+
+  .about-intro-image-wrap {
+    aspect-ratio: 1.35;
+    border-radius: 18px;
+  }
+
+  .about-image-caption {
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .founder-visual {
+    min-height: 350px;
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+
+  .founder-milestones {
+    margin-top: 22px;
+  }
+
+  .founder-milestones span {
+    font-size: 10px;
+  }
+
+  .about-team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-team-card {
+    min-height: 155px;
+    padding: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-value-card {
+    transition: none;
+  }
+}

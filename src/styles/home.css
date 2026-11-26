@@ -1,0 +1,849 @@
+.home-hero {
+  position: relative;
+  min-height: 640px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #403b5f;
+}
+
+.home-hero-image,
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.home-hero-image {
+  z-index: 0;
+  object-fit: cover;
+  object-position: center 54%;
+}
+
+.home-hero-overlay {
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgb(29 27 50 / 78%) 0%, rgb(37 34 61 / 62%) 48%, rgb(48 43 75 / 24%) 100%),
+    linear-gradient(0deg, rgb(57 49 90 / 30%) 0%, transparent 42%);
+}
+
+.home-hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: 640px;
+  align-items: center;
+  padding-top: 44px;
+  padding-bottom: 132px;
+}
+
+.home-hero-copy {
+  position: relative;
+  max-width: 780px;
+}
+
+.home-hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 22px;
+  color: #e2dcff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.home-hero-kicker span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d6ccff;
+}
+
+.home-hero h1 {
+  max-width: 780px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.8rem, 5.2vw, 4.5rem);
+  font-weight: 650;
+  letter-spacing: -0.055em;
+  line-height: 1.07;
+  text-wrap: balance;
+}
+
+.home-hero-description {
+  max-width: 570px;
+  margin: 24px 0 0;
+  color: rgb(255 255 255 / 90%);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.75;
+}
+
+.home-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.home-hero-actions .button-primary {
+  background: #8c7ae8;
+  color: #fff;
+}
+
+.home-hero-actions .button-primary:hover {
+  background: #7664d7;
+}
+
+.home-hero-actions .button,
+.section-action .button,
+.home-cta-actions .button {
+  gap: 9px;
+}
+
+.appointment-panel {
+  position: relative;
+  z-index: 3;
+  margin: -104px auto 68px;
+  padding: 24px 28px 28px;
+  scroll-margin-top: 116px;
+  border: 1px solid rgb(232 229 241 / 90%);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 22px 56px rgb(34 29 68 / 18%);
+}
+
+.appointment-panel h2 {
+  margin: 0 0 18px;
+  color: var(--color-clinic-ink);
+  font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+}
+
+.appointment-form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: end;
+  gap: 15px 14px;
+}
+
+.appointment-form-success {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 12px 16px;
+  border: 1px solid #d3cdf5;
+  border-radius: 10px;
+  background: var(--color-clinic-lavender-soft);
+  color: var(--color-clinic-primary-dark);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.appointment-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.appointment-field label {
+  color: var(--color-clinic-ink);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.appointment-field input,
+.appointment-field select {
+  width: 100%;
+  min-width: 0;
+  height: 48px;
+  padding: 0 12px;
+  border: 1px solid #dedbe9;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--color-clinic-ink);
+  font: inherit;
+  font-size: 14px;
+}
+
+.appointment-field input::placeholder {
+  color: #88879a;
+}
+
+.appointment-field input:focus,
+.appointment-field select:focus {
+  border-color: var(--color-clinic-primary);
+  outline: 3px solid rgb(108 92 231 / 18%);
+}
+
+.appointment-treatment {
+  grid-column: span 2;
+}
+
+.appointment-submit {
+  width: 100%;
+  min-height: 48px;
+  align-self: end;
+  padding-inline: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.button-secondary {
+  border-color: var(--color-clinic-border);
+  background: #fff;
+  color: var(--color-clinic-ink);
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.button-secondary:hover {
+  border-color: #bdb4f2;
+  background: var(--color-clinic-lavender-soft);
+}
+
+.assurance-section {
+  position: relative;
+  z-index: 2;
+  margin-top: -1px;
+}
+
+.assurance-banner {
+  display: flex;
+  min-height: 148px;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 28px;
+  border: 1px solid var(--color-clinic-border);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  text-align: left;
+}
+
+.assurance-icon {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 18px;
+  background: var(--color-clinic-lavender);
+  color: var(--color-clinic-primary-dark);
+}
+
+.assurance-banner h2 {
+  margin: 0;
+  color: var(--color-clinic-ink);
+  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+  font-weight: 650;
+  letter-spacing: -0.025em;
+}
+
+.assurance-banner p {
+  margin: 5px 0 0;
+  color: var(--color-clinic-muted);
+  font-size: 15px;
+}
+
+.home-section {
+  padding-block: clamp(68px, 8vw, 104px);
+}
+
+.home-section-heading {
+  max-width: 680px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.home-section-heading .eyebrow {
+  margin-bottom: 10px;
+}
+
+.home-section-heading h2 {
+  margin: 0;
+  color: var(--color-clinic-ink);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 650;
+  letter-spacing: -0.045em;
+  line-height: 1.16;
+}
+
+.home-section-description {
+  margin: 14px 0 0;
+  color: var(--color-clinic-muted);
+  font-size: 1rem;
+}
+
+.why-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(36px, 6vw, 78px);
+}
+
+.why-image-wrap,
+.facilities-image-wrap {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 1.28;
+  border: 1px solid var(--color-clinic-border);
+  border-radius: 22px;
+  background: var(--color-clinic-lavender);
+  box-shadow: var(--shadow-soft);
+}
+
+.why-image-wrap {
+  transform: translateY(clamp(-18px, calc(26.7vw - 287px), 45px));
+}
+
+.facilities-image-wrap {
+  transform: translateY(clamp(35px, calc(22.2vw - 158px), 124px));
+}
+
+.why-image,
+.facilities-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.why-content .home-section-heading,
+.facilities-content .home-section-heading {
+  max-width: none;
+  margin: 0 0 26px;
+  text-align: left;
+}
+
+.why-content .home-section-heading h2,
+.facilities-content .home-section-heading h2 {
+  font-size: clamp(1.9rem, 3.2vw, 2.65rem);
+}
+
+.reason-grid,
+.treatment-grid,
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.reason-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.reason-card,
+.treatment-card,
+.testimonial-card {
+  position: relative;
+  min-width: 0;
+  border: 1px solid var(--color-clinic-border);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 26px rgb(46 35 100 / 4%);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.reason-card:hover,
+.treatment-card:hover,
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  border-color: #d3cdf5;
+  box-shadow: var(--shadow-soft);
+}
+
+.reason-card {
+  min-height: 218px;
+  padding: 22px 20px 20px;
+}
+
+.card-index {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: #a7a1bb;
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+}
+
+.reason-icon,
+.treatment-icon {
+  display: grid;
+  width: 50px;
+  height: 50px;
+  place-items: center;
+  border-radius: 15px;
+  background: var(--color-clinic-lavender);
+  color: var(--color-clinic-primary-dark);
+}
+
+.reason-card h3,
+.treatment-card h3 {
+  margin: 24px 0 9px;
+  color: var(--color-clinic-ink);
+  font-size: 17px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.reason-card p,
+.treatment-card p {
+  margin: 0;
+  color: var(--color-clinic-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.home-services-section {
+  background: var(--color-clinic-lavender-soft);
+}
+
+.treatment-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.treatment-card {
+  display: flex;
+  min-height: 230px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 25px 25px 26px;
+}
+
+.treatment-card h3 {
+  margin-top: 20px;
+}
+
+.treatment-card p {
+  flex: 1;
+}
+
+.treatment-card-rule {
+  width: 36px;
+  height: 2px;
+  margin-top: 20px;
+  border-radius: 2px;
+  background: #c9c1f2;
+}
+
+.section-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
+}
+
+.testimonial-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.testimonial-card {
+  display: flex;
+  min-height: 275px;
+  flex-direction: column;
+  margin: 0;
+  padding: 28px;
+}
+
+.testimonial-quote-icon {
+  color: #9a8deb;
+}
+
+.testimonial-card blockquote {
+  flex: 1;
+  margin: 18px 0 24px;
+  color: #444359;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.testimonial-card figcaption {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border-top: 1px solid var(--color-clinic-border);
+  padding-top: 17px;
+}
+
+.testimonial-avatar {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-clinic-lavender);
+  color: var(--color-clinic-primary-dark);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.testimonial-name {
+  color: var(--color-clinic-ink);
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.testimonial-rating {
+  margin-left: auto;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #f3f0ff;
+  color: #5343c4;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.facilities-section {
+  background: #faf9ff;
+}
+
+.facilities-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: clamp(36px, 6vw, 78px);
+}
+
+.facilities-image-wrap {
+  aspect-ratio: 1.2;
+}
+
+.facility-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.facility-item {
+  display: flex;
+  min-height: 70px;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 15px;
+  border: 1px solid var(--color-clinic-border);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.facility-copy {
+  display: grid;
+  gap: 2px;
+}
+
+.facility-copy strong {
+  color: var(--color-clinic-ink);
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.facility-copy > span {
+  color: var(--color-clinic-muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.facility-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--color-clinic-lavender);
+  color: var(--color-clinic-primary-dark);
+}
+
+.facility-icon-image {
+  display: block;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.home-cta-section {
+  padding-block: clamp(60px, 8vw, 88px);
+  background: #6c5ce7;
+  color: #fff;
+}
+
+.home-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+}
+
+.home-cta .eyebrow {
+  margin-bottom: 10px;
+  color: #e5e0ff;
+}
+
+.home-cta h2 {
+  max-width: 650px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.9rem, 3.7vw, 2.75rem);
+  font-weight: 650;
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+}
+
+.home-cta > div:first-child > p:last-child {
+  margin: 14px 0 0;
+  color: #eeeaff;
+}
+
+.home-cta-actions {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 11px;
+}
+
+.button-light {
+  background: #fff;
+  color: #4e40b6;
+}
+
+.button-light:hover {
+  background: #f3f0ff;
+}
+
+.button-outline-light {
+  border-color: rgb(255 255 255 / 55%);
+  background: transparent;
+  color: #fff;
+}
+
+.button-outline-light:hover {
+  background: rgb(255 255 255 / 10%);
+}
+
+@media (max-width: 1000px) {
+  .home-hero,
+  .home-hero-content {
+    min-height: 610px;
+  }
+
+  .appointment-form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .appointment-treatment {
+    grid-column: auto;
+  }
+
+  .reason-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .why-layout,
+  .facilities-layout {
+    gap: 28px;
+  }
+
+  .home-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .home-cta-actions {
+    width: min(100%, 360px);
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 741px) and (max-width: 900px) {
+  .why-image-wrap {
+    transform: translateY(clamp(-71px, calc(40.2vw - 379px), -18px));
+  }
+}
+
+@media (max-width: 740px) {
+  .why-image-wrap,
+  .facilities-image-wrap {
+    transform: none;
+  }
+
+  .home-hero,
+  .home-hero-content {
+    min-height: 620px;
+  }
+
+  .home-hero-content {
+    padding-bottom: 118px;
+  }
+
+  .home-hero-image {
+    object-position: 58% center;
+  }
+
+  .appointment-panel {
+    margin-top: -82px;
+    margin-bottom: 56px;
+  }
+
+  .home-hero h1 {
+    max-width: 600px;
+    font-size: clamp(2.55rem, 10vw, 3.7rem);
+  }
+
+  .why-layout,
+  .facilities-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .why-image-wrap {
+    aspect-ratio: 1.7;
+  }
+
+  .facilities-image-wrap {
+    aspect-ratio: 1.7;
+    order: -1;
+  }
+
+  .why-content .home-section-heading,
+  .facilities-content .home-section-heading {
+    margin-bottom: 24px;
+  }
+
+  .treatment-grid,
+  .testimonial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .testimonial-card {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 520px) {
+  .home-hero,
+  .home-hero-content {
+    min-height: 640px;
+  }
+
+  .home-hero-content {
+    padding: 48px 0 112px;
+  }
+
+  .home-hero-kicker {
+    font-size: 11px;
+  }
+
+  .home-hero h1 {
+    font-size: clamp(2.35rem, 11vw, 3rem);
+  }
+
+  .home-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .home-hero-actions .button {
+    width: 100%;
+  }
+
+  .appointment-panel {
+    margin-top: -58px;
+    margin-bottom: 44px;
+    padding: 20px 18px 22px;
+    border-radius: 16px;
+  }
+
+  .appointment-panel h2 {
+    margin-bottom: 16px;
+  }
+
+  .appointment-form-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .appointment-treatment {
+    grid-column: auto;
+  }
+
+  .appointment-submit {
+    margin-top: 4px;
+  }
+
+  .assurance-banner {
+    min-height: 0;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 22px 18px;
+  }
+
+  .assurance-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+  }
+
+  .assurance-icon svg {
+    width: 24px;
+  }
+
+  .assurance-banner h2 {
+    font-size: 1.2rem;
+  }
+
+  .assurance-banner p {
+    font-size: 14px;
+  }
+
+  .reason-grid,
+  .treatment-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reason-card {
+    min-height: auto;
+  }
+
+  .treatment-card {
+    min-height: 205px;
+  }
+
+  .testimonial-card {
+    min-height: 0;
+  }
+
+  .facility-item {
+    min-height: 92px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .home-cta-actions {
+    flex-direction: column;
+  }
+
+  .home-cta-actions .button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reason-card,
+  .treatment-card,
+  .testimonial-card {
+    transition: none;
+  }
+}
