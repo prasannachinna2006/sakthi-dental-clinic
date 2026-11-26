@@ -164,7 +164,6 @@ function handleAppointmentLinkClick(event) {
   }
 
   event.preventDefault()
-  window.history.pushState(null, '', '#appointment-form')
   appointmentPanel.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 

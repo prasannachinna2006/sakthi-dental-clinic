@@ -1,5 +1,5 @@
 import { useLayoutEffect } from 'react'
-import { BrowserRouter, useLocation } from 'react-router-dom'
+import { HashRouter, useLocation } from 'react-router-dom'
 import AppRoutes from './routes/AppRoutes'
 
 function ScrollToTop() {
@@ -14,10 +14,10 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <AppRoutes />
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
